@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Wardrobe / Tops | OR.site</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="../css/reset.css">
+    <link rel="stylesheet" href="../css/base.css">
+    <link rel="stylesheet" href="../css/wardrobe-category.css">
+</head>
+
+<body>
+
+    <!-- HEADER -->
+    <header class="header">
+        <div class="header-inner">
+            <div class="logo">OR.site</div>
+            <a href="home.html">Home</a>
+            <a href="wardrobe.html">Wardrobe</a>
+            <a href="profile.html">Profile</a>
+            <a href="logout.html">Sign Out</a>
+
+
+        </div>
+    </header>
+
+    <!-- PAGE -->
+    <main class="category-page">
+
+        <!-- USER INFO -->
+        <section class="user-info">
+            <div class="avatar"></div>
+            <div class="user-text">
+                <h2>Hello username,</h2>
+                <p>Email</p>
+            </div>
+        </section>
+
+        <!-- BREADCRUMB -->
+        <h3 class="breadcrumb">
+            <a href="wardrobe.html" class="breadcrumb-link">Wardrobe</a>
+            <span>/</span>
+            <span id="category-name"></span>
+        </h3>
+
+
+        <!-- IMAGE GRID -->
+        <section class="image-grid">
+
+            <!-- ITEM -->
+            <div class="image-item">
+                <div class="image-placeholder"></div>
+            </div>
+
+            <div class="image-item">
+                <div class="image-placeholder"></div>
+            </div>
+
+            <div class="image-item">
+                <div class="image-placeholder"></div>
+            </div>
+
+            <div class="image-item">
+                <div class="image-placeholder"></div>
+            </div>
+
+            <div class="image-item">
+                <div class="image-placeholder"></div>
+            </div>
+
+            <div class="image-item">
+                <div class="image-placeholder"></div>
+            </div>
+
+            <div class="image-item">
+                <div class="image-placeholder"></div>
+            </div>
+
+            <div class="image-item">
+                <div class="image-placeholder"></div>
+            </div>
+
+        </section>
+
+    </main>
+    <script>
+        // Lấy query param ?type=
+        const params = new URLSearchParams(window.location.search);
+        const category = params.get("type");
+
+        // Map hiển thị đẹp (nếu muốn)
+        const displayMap = {
+            "tops": "tops",
+            "bottoms": "bottoms",
+            "all-body": "all-body",
+            "outerwear": "outerwear",
+            "shoes": "shoes",
+            "bags": "bags",
+            "accessories": "accessories",
+            "hats": "hats",
+            "jewellery": "jewellery",
+            "scarves": "scarves",
+            "sunglasses": "sunglasses"
+        };
+
+        // Gán text
+        document.getElementById("category-name").textContent =
+            displayMap[category] || "unknown";
+    </script>
+
+</body>
+
+</html>

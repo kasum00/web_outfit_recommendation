@@ -1,0 +1,104 @@
+/* ===== DASHBOARD ===== */
+
+.dashboard {
+  min-height: calc(100vh - 70px);
+  padding: 40px 80px;
+  background:
+    radial-gradient(circle at left bottom, #f9c7d3 0%, #ffffff 35%),
+    radial-gradient(circle at right bottom, #f9c7d3 0%, #ffffff 35%);
+}
+
+/* ===== HEADER ===== */
+.fixed-header {
+  height: 70px;
+  background: #d99aa9;
+  display: flex;
+  align-items: center;
+  padding: 0 60px;
+}
+
+.header-left {
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.nav a {
+  margin-right: 28px;
+  color: #000;
+  font-size: 15px;
+}
+
+.nav a.active {
+  color: #e64b6a;
+  text-decoration: underline;
+}
+
+/* ===== USER INFO ===== */
+.user-info {
+  display: flex;
+  align-items: center;
+  gap: 18px;
+  margin-bottom: 80px;
+}
+
+.avatar {
+  width: 70px;
+  height: 70px;
+  background: #ec8aa3;
+  border-radius: 50%;
+}
+
+.user-info h2 {
+  font-size: 20px;
+  margin-bottom: 4px;
+}
+
+.user-info p {
+  font-size: 14px;
+  color: #555;
+}
+
+/* ===== CENTER ===== */
+.dashboard-center {
+  margin-top: 140px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;     /* CĂN GIỮA NGANG */
+  text-align: center;
+}
+
+/* 2 DÒNG CHỮ */
+.line-text {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: #e2a1b2;
+  line-height: 1.4;
+}
+
+/* khoảng cách giữa 2 dòng chữ */
+.line-text + .line-text {
+  margin-top: 10px;
+}
+
+/* ===== NÚT UPLOAD ===== */
+.upload-btn {
+  margin-top: 0px;        /* NẰM NGAY DƯỚI DÒNG CHỮ */
+  padding: 12px 36px;      /* BO THEO CHỮ */
+  width: auto;             /* QUAN TRỌNG: KHÔNG CỐ ĐỊNH WIDTH */
+  border-radius: 999px;    /* BO TRÒN ĐẸP */
+}
+
+
+
+.dashboard-center h1 {
+  font-family: "Playfair Display", serif;
+  font-size: 36px;
+  color: #e2a1b2;
+  line-height: 1.4;
+  margin-bottom: 50px;
+}
+
+.upload-btn {
+  width: 420px;
+}
