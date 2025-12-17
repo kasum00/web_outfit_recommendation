@@ -28,7 +28,7 @@
     <div class="signup-page">
 
         <!-- LEFT -->
-        <div class="signup-left">     
+        <div class="signup-left">
 
             <!-- TITLE (ÉP 2 DÒNG CHẮC CHẮN) -->
             <h1 class="signup-title">
@@ -36,15 +36,18 @@
                 <span>Outfit Recommendation!</span>
             </h1>
 
+
             <!-- FORM -->
-            <form class="signup-form" action="setup-profile.html">
-                <input type="text" placeholder="Username" required>
-                <input type="email" placeholder="Email" required>
-                <input type="password" placeholder="Password" required>
-                <input type="password" placeholder="Confirm Password" required>
+            <form class="signup-form" method="POST" action="http://localhost:3000/auth/signup">
+                <input type="text" name="username" placeholder="Username" required>
+                <input type="email" name="email" placeholder="Email" required>
+                <input type="password" name="password" placeholder="Password" required>
+                <input type="password" name="confirmPassword" placeholder="Confirm Password" required>
 
                 <button type="submit">Sign up</button>
             </form>
+
+
 
 
             <!-- FOOTER -->

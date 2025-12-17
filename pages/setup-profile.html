@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <title>Set up profile | OR.site</title>
@@ -19,18 +20,19 @@
   <div class="setup-page">
 
     <div class="setup-left">
-      
+
       <h1 class="setup-title">Set up profile</h1>
 
-      <form class="setup-form" action="index.html">
-        <input type="text" placeholder="User Name" required>
-        <input type="text" placeholder="Gender" required>
-        <input type="text" placeholder="Height" required>
-        <input type="text" placeholder="Style preference" required>
-        <input type="text" placeholder="Favourite color" required>
+      <form class="setup-form" method="POST" action="http://localhost:3000/profile/setup">
+        <input type="text" name="username" placeholder="User Name" required>
+        <input type="text" name="gender" placeholder="Gender" required>
+        <input type="text" name="height" placeholder="Height" required>
+        <input type="text" name="style" placeholder="Style preference" required>
+        <input type="text" name="favoriteColor" placeholder="Favourite color" required>
 
         <button type="submit">Save & continue</button>
       </form>
+      
     </div>
 
     <div class="setup-right">
@@ -38,6 +40,6 @@
     </div>
 
   </div>
-
 </body>
+
 </html>

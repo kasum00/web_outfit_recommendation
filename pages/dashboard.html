@@ -35,8 +35,9 @@
             <div class="avatar"></div>
 
             <div>
-                <h2>Hello username,</h2>
-                <p>Email</p>
+                <h2>Hello <span id="username">username</span>,</h2>
+                <p id="email">Email</p>
+
             </div>
         </div>
 
@@ -50,8 +51,42 @@
             <button class="btn upload-btn">
                 Upload Wardrobe
             </button>
+            <input type="file" id="wardrobeInput" accept="image/*" hidden>
+
 
     </main>
+    <script>
+        // ===== LOAD USER INFO =====
+        fetch("/auth/me")
+            .then(res => {
+                if (!res.ok) {
+                    window.location.href = "/pages/login.html";
+                    return;
+                }
+                return res.json();
+            })
+            .then(user => {
+                document.getElementById("username").textContent = user.username;
+                document.getElementById("email").textContent = user.email;
+            });
+
+        // ===== UPLOAD BUTTON =====
+        const uploadBtn = document.querySelector(".upload-btn");
+        const fileInput = document.getElementById("wardrobeInput");
+
+        uploadBtn.addEventListener("click", () => {
+            fileInput.click(); // mở chọn ảnh
+        });
+
+        fileInput.addEventListener("change", () => {
+            if (fileInput.files.length > 0) {
+                const file = fileInput.files[0];
+                alert("Selected image: " + file.name);
+                // sau này gửi ảnh lên backend / AI ở đây
+            }
+        });
+    </script>
+
 
 </body>
 
